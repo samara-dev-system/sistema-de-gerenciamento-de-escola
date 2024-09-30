@@ -1,0 +1,44 @@
+# Projeto Escola
+
+Este projeto consiste em um sistema de gerenciamento de alunos, cursos e notas em um banco de dados MySQL. O objetivo é armazenar e gerenciar informações sobre alunos, cursos que eles estão matriculados e suas respectivas notas.
+
+## Estrutura do Banco de Dados
+
+O banco de dados `escola` contém as seguintes tabelas:
+
+1. **alunos**
+   - `alunoID` (INT): Identificador único do aluno.
+   - `nome` (VARCHAR): Nome do aluno.
+   - `dataDeNascimento` (DATE): Data de nascimento do aluno.
+   - `endereço` (VARCHAR): Endereço do aluno.
+
+2. **cursos**
+   - `cursoID` (INT): Identificador único do curso.
+   - `nome_curso` (VARCHAR): Nome do curso.
+   - `descrição` (VARCHAR): Descrição do curso.
+
+3. **notas**
+   - `notaID` (INT): Identificador único da nota.
+   - `alunoID` (INT): Identificador do aluno.
+   - `cursoID` (INT): Identificador do curso.
+   - `nota` (DECIMAL): Nota obtida pelo aluno no curso.
+
+## Instruções para Uso
+
+1. **Configuração do Banco de Dados**:
+   - Clone o repositório.
+   - Execute os comandos SQL no seu ambiente MySQL para criar o banco de dados e as tabelas.
+
+2. **Manipulação de Dados**:
+   - Utilize as instruções de inserção, atualização e deleção de acordo com suas necessidades.
+
+3. **Consultas**:
+   - Realize as consultas disponíveis para obter informações sobre alunos, cursos e notas.
+
+## Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
