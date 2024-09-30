@@ -1,0 +1,37 @@
+-- Completar as operações de DELETE de forma adequada
+
+-- Primeiro, deletar notas relacionadas ao aluno antes de deletar o aluno
+DELETE FROM notas 
+WHERE alunoID = 1;
+
+-- Deletar o aluno
+DELETE FROM alunos 
+WHERE alunoID = 1;
+
+-- Deletar notas relacionadas ao curso antes de deletar o curso
+DELETE FROM notas 
+WHERE cursoID = 1;
+
+-- Deletar o curso
+DELETE FROM cursos 
+WHERE cursoID = 1;
+
+-- Exibir os dados restantes para verificar o estado do banco
+SELECT * FROM alunos;
+SELECT * FROM cursos;
+SELECT * FROM notas;
+
+-- Exemplo de atualização de endereço para um aluno existente
+UPDATE alunos 
+SET endereço = 'rua nova, 123' 
+WHERE alunoID = 2; -- mudando o alunoID conforme necessário
+
+-- Exibir as notas médias novamente após as operações de deletar e atualizar
+SELECT cursos.nome_curso AS curso,
+       AVG(notas.nota) AS mediaNota
+FROM notas
+JOIN cursos ON notas.cursoID = cursos.cursoID
+GROUP BY cursos.nome_curso
+LIMIT 0, 1000;
+
+-- Se você precisar de mais consultas ou operações, informe!
