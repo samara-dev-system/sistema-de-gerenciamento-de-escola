@@ -1,0 +1,16 @@
+# Ignorar arquivos de configuração do MySQL
+*.sql
+*.db
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar arquivos de backup
+*.bak
+
+# Ignorar pastas de IDEs
+.idea/
+.vscode/
+
+# Ignorar arquivos temporários
+*.tmp
